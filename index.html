@@ -24,6 +24,10 @@
     <dd><a href="e3_luciferpv_1080p_3fps_1000kbps.mp4">e3_luciferpv_1080p_3fps_1000kbps.mp4</a> <button onclick="playVideo('e3_luciferpv_1080p_3fps_1000kbps.mp4')">play</button></dd>
   </dl>
   <dl>
+    <dt>ffmpeg -i ../e3_luciferpv_1080p.mov -c:v libx264 -b:v 1000k -c:a aac -b:a 128k -r 10 -vprofile high -vlevel 4.1 -movflags faststart e3_luciferpv_1080p_10fps_1000kbps.mp4</dt>
+    <dd><a href="e3_luciferpv_1080p_10fps_1000kbps.mp4">e3_luciferpv_1080p_10fps_1000kbps.mp4</a> <button onclick="playVideo('e3_luciferpv_1080p_10fps_1000kbps.mp4')">play</button></dd>
+  </dl>
+  <dl>
     <dt>ffmpeg -i ../e3_luciferpv_1080p.mov -c:v libx264 -b:v 100k -c:a aac -b:a 128k -r 29.97 -vprofile high -vlevel 4.1 -movflags faststart e3_luciferpv_1080p_29_97fps_100kbps.mp4</dt>
     <dd><a href="e3_luciferpv_1080p_29_97fps_100kbps.mp4">e3_luciferpv_1080p_29_97fps_100kbps.mp4</a> <button onclick="playVideo('e3_luciferpv_1080p_29_97fps_100kbps.mp4')">play</button></dd>
   </dl>
