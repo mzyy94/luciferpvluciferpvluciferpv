@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bbb</title>
+  <style>
+    html,
+    body,
+    video {
+      padding: 0;
+      margin: 0;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+  </head>
+<body>
+  <dl>
+    <dt>ffmpeg -i ../e3_luciferpv_1080p.mov -c:v libx264 -b:v 1000k -c:a aac -b:a 128k -r 3 -vprofile high -vlevel 4.1 -movflags faststart e3_luciferpv_1080p_3fps_1000kbps.mp4</dt>
+    <dd><a href="e3_luciferpv_1080p_3fps_1000kbps.mp4">e3_luciferpv_1080p_3fps_1000kbps.mp4</a> <button onclick="playVideo('e3_luciferpv_1080p_3fps_1000kbps.mp4')">play</button></dd>
+  </dl>
+  <dl>
+    <dt>ffmpeg -i ../e3_luciferpv_1080p.mov -c:v libx264 -b:v 100k -c:a aac -b:a 128k -r 29.97 -vprofile high -vlevel 4.1 -movflags faststart e3_luciferpv_1080p_29_97fps_100kbps.mp4</dt>
+    <dd><a href="e3_luciferpv_1080p_29_97fps_100kbps.mp4">e3_luciferpv_1080p_29_97fps_100kbps.mp4</a> <button onclick="playVideo('e3_luciferpv_1080p_29_97fps_100kbps.mp4')">play</button></dd>
+  </dl>
+  <dl>
+    <dt>ffmpeg -i ../e3_luciferpv_1080p.mov -c:v libx264 -b:v 2000k -c:a aac -b:a 128k -r 29.97 -vprofile high -vlevel 4.1 -movflags faststart e3_luciferpv_1080p_29_97fps_2000kbps.mp4</dt>
+    <dd><a href="e3_luciferpv_1080p_29_97fps_2000kbps.mp4">e3_luciferpv_1080p_29_97fps_2000kbps.mp4</a> <button onclick="playVideo('e3_luciferpv_1080p_29_97fps_2000kbps.mp4')">play</button></dd>
+  </dl>
+</body>
+<script>
+  function playVideo(src) {
+    const video = document.createElement('video');
+    video.src = src;
+    video.autoplay = true;
+    video.muted = true;
+    video.controls = true;
+    document.body.innerHTML = '';
+    document.body.append(video);
+  }
+  if (location.search.endsWith('.mp4')) {
+    playVideo(location.search.slice(1));
+  }
+</script>
+</html>
